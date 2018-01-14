@@ -10,13 +10,29 @@ import Feature from './components/Feature';
 class App extends Component {
   render() {
     return (
-      <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4 overflow-scroll">
+      <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4 overflow-auto">
         <h1 className="h-1 mb-8">Tailwind Themes</h1>
         <h2 className="mb-8 text-base text-center font-thin">
           High quality website templates supercharged by TailwindCSS.
         </h2>
 
-        <div className="w-full md:w-3/4 h-auto flex flex-wrap clearfix">
+        <div className="block mb-8 w-full text-center">
+          <input
+            autoFocus
+            className="block md:inline w-full md:w-1/3 shadow appearance-none border rounded py-2 px-3 mr-1 mb-1 text-grey-darker"
+            id="email"
+            type="email"
+            placeholder="Enter your email to receive the latest news"
+          />
+          <button
+            type="submit"
+            className="rounded-sm bg-teal-lighter hover:bg-teal-dark text-teal-darker text-bold p-2"
+          >
+            Sign up
+          </button>
+        </div>
+
+        <div className="w-full md:w-3/4 h-auto flex flex-wrap">
           <Feature
             description="Tailwind is a utility-first CSS framework for rapidly building custom user interfaces."
             icon={<TailwindIcon />}
@@ -41,26 +57,6 @@ class App extends Component {
             title="Localised Support"
           />
         </div>
-
-        <div className="mb-8 w-full text-center">
-          <input
-            autoFocus
-            className="block md:inline w-full md:w-1/3 shadow appearance-none border rounded py-2 px-3 mr-1 mb-1 text-grey-darker"
-            id="email"
-            type="email"
-            placeholder="Enter your email to receive the latest news"
-          />
-          <button
-            type="submit"
-            className="rounded-sm bg-teal-lighter hover:bg-teal-dark text-teal-darker text-bold p-2"
-          >
-            Sign up
-          </button>
-        </div>
-
-        <footer className="text-xs">
-          Copyright &copy; {new Date().getFullYear()}
-        </footer>
       </div>
     );
   }
