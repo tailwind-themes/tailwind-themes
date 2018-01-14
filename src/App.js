@@ -10,13 +10,13 @@ import Feature from './components/Feature';
 class App extends Component {
   render() {
     return (
-      <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4">
+      <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4 overflow-scroll">
         <h1 className="h-1 mb-8">Tailwind Themes</h1>
         <h2 className="mb-8 text-base text-center font-thin">
           High quality website templates supercharged by TailwindCSS.
         </h2>
 
-        <div className="w-full md:w-2/3 h-auto flex flex-wrap">
+        <div className="w-full md:w-3/4 h-auto flex flex-wrap clearfix">
           <Feature
             description="Tailwind is a utility-first CSS framework for rapidly building custom user interfaces."
             icon={<TailwindIcon />}
@@ -27,6 +27,18 @@ class App extends Component {
             description="Build a website which looks outstanding on desktop, tablet and mobile."
             icon={<Icon icon={mobile} size={40} />}
             title="Fully Responsive"
+          />
+
+          <Feature
+            description="Create a website which works flawlessly on Chrome, Firefox, Internet Explorer and more."
+            icon={<Icon icon={browser} size={40} />}
+            title="Cross-Browser Support"
+          />
+
+          <Feature
+            description="Built in localised support makes translating content as simple as possible."
+            icon={<Icon icon={ic_language} size={40} />}
+            title="Localised Support"
           />
         </div>
 
@@ -40,25 +52,15 @@ class App extends Component {
           />
           <button
             type="submit"
-            className="rounded-sm bg-teal hover:bg-teal-dark text-teal-darker text-bold p-2"
+            className="rounded-sm bg-teal-lighter hover:bg-teal-dark text-teal-darker text-bold p-2"
           >
             Sign up
           </button>
         </div>
 
-        <div className="w-full md:w-2/3 h-auto flex flex-wrap">
-          <Feature
-            description="Create a website which works flawlessly on Chrome, Firefox, Internet Explorer and more."
-            icon={<Icon icon={browser} size={40} />}
-            title="Cross-Browser Support"
-          />
-
-          <Feature
-            description="Built in localised support makes translating content as simple as possible."
-            icon={<Icon icon={ic_language} size={40} />}
-            title="Localised Support"
-          />
-        </div>
+        <footer className="text-xs">
+          Copyright &copy; {new Date().getFullYear()}
+        </footer>
       </div>
     );
   }
