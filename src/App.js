@@ -8,6 +8,8 @@ import TailwindIcon from './components/TailwindIcon';
 import './App.css';
 import Feature from './components/Feature';
 
+import logo from './images/logo.png';
+
 class App extends Component {
   state = {
     email: '',
@@ -75,7 +77,7 @@ class App extends Component {
   render() {
     return (
       <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4 overflow-auto">
-        <h1 className="h-1 mb-8">Tailwind Themes</h1>
+        <img alt="Tailwind Themes" src={logo} className="w-64 h-auto" />
         <h2 className="mb-8 text-base text-center font-thin">
           High quality website templates supercharged by TailwindCSS.
         </h2>
