@@ -3,6 +3,7 @@ import Icon from 'react-icons-kit';
 import { mobile } from 'react-icons-kit/icomoon/mobile';
 import { ic_language } from 'react-icons-kit/md/ic_language';
 import { browser } from 'react-icons-kit/iconic/browser';
+import { twitter } from 'react-icons-kit/icomoon/twitter';
 import TailwindIcon from './components/TailwindIcon';
 
 import './App.css';
@@ -30,10 +31,7 @@ class App extends Component {
       {
         credentials: 'include'
       }
-    )
-      // .then(() => this.setState({subscribed: true}))
-      // .catch((e) => this.setState({error: e.message}))
-      .finally(() => this.setState({ submitting: false, subscribed: true }));
+    ).finally(() => this.setState({ submitting: false, subscribed: true }));
   };
 
   renderForm() {
@@ -79,7 +77,14 @@ class App extends Component {
       <div className="App flex flex-col justify-center content-center items-center w-full h-screen bg-teal text-white p-4 overflow-auto">
         <img alt="Tailwind Themes" src={logo} className="w-64 h-auto" />
         <h2 className="mb-8 text-base text-center font-thin">
-          High quality website templates supercharged by TailwindCSS.
+          High quality website templates supercharged by TailwindCSS.{' '}
+          <a
+            href="https://www.twitter.com/tailwind_themes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon className="text-white" icon={twitter} size={18} />
+          </a>
         </h2>
 
         <div className="block mb-8 w-full text-center">{this.renderForm()}</div>
